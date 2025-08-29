@@ -8,6 +8,11 @@ module "resource_group1" {
   resource_group_name = "vikks2"
   location            = "centralindia"
 }
+module "resource_group3" {
+  source              = "../module/resource_group"
+  resource_group_name = "rkha"
+  location            = "centralindia"
+}
 module "virtual_network" {
   depends_on               = [module.resource_group]
   source                   = "../module/virtual_network"
